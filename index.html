@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio</title>
+    <meta name="description" content="Portfolio Template for Developer" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+
+    .header__link-wrapper {
+      list-style: none;
+      padding: 0;
+    }
+
+    .header__link-wrapper a {
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 2px;
+      transition: padding-bottom 0.3s ease;
+      cursor: pointer;
+    }
+
+    .header__link-wrapper a::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #0062b9;
+      bottom: 0;
+      top: 100%;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.5s ease;
+    }
+
+    .header__link-wrapper a:hover {
+      padding-bottom: 0;
+    }
+
+    .header__link-wrapper a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    .cursor{
+      display: inline-block;
+      background-color: #ccc;
+      margin-left: 0.1rem;
+      width: 3px;
+      animation: blink 1s infinite;
+    }
+
+    .cursor.typing{
+      animation: none;
+    }
+
+    @keyframes blink {
+      0% {
+        background-color: #ccc;
+      }
+
+      49% {
+        background-color: #ccc;
+      }
+
+      50% {
+        background-color: transparent;
+      }
+
+      99% {
+        background-color: transparent;
+      }
+
+      100% {
+        background-color: #ccc;
+      }
+    }
+
+  </style>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="images/eu.jpeg"
+              alt="Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Boaba Ionut-Constantin</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home-hero">
+      <div class="home-hero__content">
+        <h1 class="heading-primary">Hey, My name is Boaba Ionut-Constantin</h1>
+        <div class="home-hero__info">
+          <p class="text-primary">
+            I'm a <span class="typing-text"></span>
+            <span class="cursor">&nbsp;</span>
+          </p>
+        </div>
+        <!--
+        <div class="home-hero__cta">
+          <a href="./Projects/" class="btn btn--bg" target="_blank">Projects</a>
+        </div>
+      -->
+      </div>
+      <div class="home-hero__socials">
+        <div class="home-hero__social">
+          <a href="https://www.linkedin.com/in/ionut-boaba-1777b5269/" class="home-hero__social-icon-link" target="_blank">
+            <img
+              src="./assets/png/linkedin-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="https://github.com/Ionut4324" class="home-hero__social-icon-link" target="_blank">
+            <img
+              src="./assets/png/github-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a
+            href="https://instagram.com/pheno.1?igshid=MzRlODBiNWFlZA=="
+            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none" target="_blank">
+            <img
+              src="./assets/png/insta-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="home-hero__mouse-scroll-cont">
+        <div class="mouse"></div>
+      </div>
+    </section>
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">About Me</span>
+          <span class="heading-sec__sub">
+            I am an ambitious, dedicated, and adaptable person with
+              strong communication and teamwork skills. I have a positive
+              attitude and I am always willing to learn new things to
+              improve my professional abilities and achieve my goals.
+              I am highly organized and enjoy planning my work so that I
+              can complete tasks on time and efficiently.
+              I am currently seeking opportunities to apply my skills and
+              gain practical experience. I believe that working in a
+              professional environment will allow me to further strengthen
+              my skills and expand my knowledge.
+          </span>
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <h3 class="about__content-title">Get to know me!</h3>
+            <div class="about__content-details">
+              <p class="about__content-details-para">
+                Hey! It's
+                <strong>Boaba Ionut-Contantin</strong>
+                and I'm a <strong>Student at the <strong>Faculty of Cybernetics, Statistics and Informatics</strong> and a Junior Frontend Web Developer </strong> located in
+                Bucharest. I am a dedicated student with a strong passion for technology and web development. 
+                My goal is to pursue a career in the IT industry, specifically in the field of <strong> web development</strong>, 
+                to contribute to the creation of innovative and functional digital experiences.
+
+                Throughout my academic projects, I have gained solid knowledge in languages such as <strong>
+                HTML, CSS, and JavaScript</strong>. These have helped me understand the structure of a web page, style elements to make them appealing
+                and add interactivity to enhance user engagement.
+              </p>
+              <p class="about__content-details-para">
+                I'm a bit of a digital product junky. Over the years, I've used
+                hundreds of web and mobile apps in different industries and
+                verticals. Feel free to
+                <strong>contact</strong> me here.
+              </p>
+            </div>
+            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
+              >Contact</a
+            >
+          </div>
+          <div class="about__content-skills">
+            <h3 class="about__content-title">My Skills</h3>
+            <div class="skills">
+              <div class="skills__skill">HTML</div>
+              <div class="skills__skill">CSS</div>
+              <div class="skills__skill">JavaScript</div>
+              <div class="skills__skill">Wordpress</div>
+              <div class="skills__skill">Java</div>
+              <div class="skills__skill">C++</div>
+            </div>
+            <h3 class="about__content-title">Certifications</h3>
+            <ol class="certificates">
+              <li class="certificates__certificate">Code Sinaia Certification</li>
+              <li class="certificates__certificate">HTML5 and CSS3 Course: From Beginner to Advanced</li>
+              <li class="certificates__certificate">The Complete 2023 Web Development Bootcamp</li>
+            </ol>
+            <h3 class="about__content-title">Soft skills</h3>
+            <ul class="certificates">
+              <li class="skills__skill">Problem-Solving</li>
+              <li class="skills__skill">Teamwork</li>
+              <li class="skills__skill">Attention to Detail</li>
+              <li class="skills__skill">Critical Thinking</li>
+              <li class="skills__skill">Time Management</li>
+              <li class="skills__skill">Adaptability</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Projects</span>
+          <span class="heading-sec__sub">
+            Here are the projects I managed to accomplish during my time in college.
+          </span>
+        </h2>
+
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/My-Hotel.jpeg"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Hotel management project in c++</h3>
+              <p class="projects__row-content-desc">
+                The project was accompanied by a menu that allowed
+                the user to perform various actions such as modifying
+                the availability of rooms or occupancy
+
+              </p>
+
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/my-library.jpeg"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Library management project in c#</h3>
+              <p class="projects__row-content-desc">
+                The project simulated a web page that allowed users to
+                  manage their online library.
+              </p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+          <span class="heading-sec__sub heading-sec__sub--lt">
+            Send me an email here
+          </span>
+        </h2>
+        <div class="contact__form-container">
+          <form action="#" class="contact__form">
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Name</label>
+              <input
+                required
+                placeholder="Enter Your Name"
+                type="text"
+                class="contact__form-input"
+                name="name"
+                id="name"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
+              <input
+                required
+                placeholder="Enter Your Email"
+                type="text"
+                class="contact__form-input"
+                name="email"
+                id="email"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
+              <textarea
+                required
+                cols="30"
+                rows="10"
+                class="contact__form-input"
+                placeholder="Enter Your Message"
+                name="message"
+                id="message"
+              ></textarea>
+            </div>
+            <a href="mailto:ionut.boaba2002@gmail.com">
+            <button type="submit" class="btn btn--theme contact__btn">
+              Submit
+            </button></a>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ionut-boaba-1777b5269/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/Ionut4324">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://instagram.com/pheno.1?igshid=MzRlODBiNWFlZA==">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Boaba Ionut-Constantin</h4>
+            <p class="main-footer__short-desc">
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
